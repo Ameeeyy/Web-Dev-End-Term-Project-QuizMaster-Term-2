@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QuizMaster - Interactive Learning Platform</title>
+<script src="script.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+<div class="header">
+<h1>📚 QuizMaster</h1>
+<p>Test • Learn • Improve</p>
+</div>
+
+<div class="content">
+
+<div class="start-screen active">
+<h2>Welcome!</h2>
+<p style="margin:15px 0;color:#555">Choose a subject and test your understanding.</p>
+
+<select id="category" style="padding:12px;width:100%;border-radius:8px">
+<option value="javascript">JavaScript Basics</option>
+<option value="science">Science</option>
+<option value="math">Mathematics</option>
+</select>
+
+<button class="btn" onclick="startQuiz()">Start Quiz</button>
+</div>
+
+<div class="quiz-screen">
+<div class="progress-bar"><div id="progressBar" class="progress-fill"></div></div>
+
+<div style="display:flex;justify-content:space-between;margin-bottom:15px">
+<span id="qCount"></span>
+<span class="timer" id="timer"></span>
+</div>
+
+<div class="question-text" id="questionText"></div>
+<div class="options" id="options"></div>
+
+<button class="btn" onclick="nextQuestion()">Next</button>
+</div>
+
+<div class="result-screen">
+<div class="result-card">
+<h2>Quiz Completed 🎉</h2>
+
+<h1 id="scoreText"></h1>
+<p id="resultMsg"></p>
+
+<div class="review-box" id="reviewBox"></div>
+
+<button class="btn" onclick="restartQuiz()">Restart Quiz</button>
+</div>
+</div>
+
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
